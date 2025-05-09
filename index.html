@@ -1,10 +1,15 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Blog</title>
+    <title>Simple Blog with Links Section</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com ">
+    <link rel="preconnect" href="https://fonts.gstatic.com " crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather :ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    
     <style>
         /* Reset some default styles */
         * {
@@ -15,11 +20,11 @@
 
         /* Base styles */
         body {
-            font-family: "Consolas", "Courier New", Courier, monospace;
+            font-family: 'Merriweather', serif;
             line-height: 1.8;
-            background-color: #f8f5f1; /* Warm beige background */
-            color: #4a4440; /* Dark brown-gray text */
-            padding: 2rem;
+            background-color: #f8f5f1;
+            color: #4a4440;
+            scroll-behavior: smooth;
         }
 
         /* Container for the content */
@@ -28,23 +33,70 @@
             margin: 0 auto;
         }
 
-        /* Header styles */
+        /* Header section - full viewport height */
         header {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
             text-align: center;
-            margin-bottom: 3rem;
-            padding-bottom: 1rem;
             border-bottom: 1px solid #e0d7d0;
         }
 
         header h1 {
+            font-family: 'Space Grotesk', sans-serif;
             font-size: 2.5rem;
-            color: #6b5952; /* Rich brown heading */
-            margin-bottom: 0.5rem;
+            color: #6b5952;
+            margin-bottom: 1.5rem;
         }
 
         header p {
             font-size: 1.1rem;
-            color: #9c928e; /* Light gray-brown subheading */
+            color: #9c928e;
+            margin-bottom: 2rem;
+        }
+
+        /* Links section */
+        .links-section {
+            margin: 2rem 0;
+        }
+
+        .links-section h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            color: #6b5952;
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Down arrow */
+        .down-arrow {
+            margin-top: auto;
+            font-size: 2rem;
+            color: #9c928e;
+            cursor: pointer;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(5px); }
+        }
+
+        /* Blog section */
+        .blog-section {
+            padding: 2rem;
         }
 
         /* Blog post styles */
@@ -100,10 +152,6 @@
 
         /* Responsive design */
         @media (max-width: 600px) {
-            body {
-                padding: 1rem;
-            }
-            
             header h1 {
                 font-size: 2rem;
             }
@@ -111,16 +159,49 @@
             .post h2 {
                 font-size: 1.5rem;
             }
+            
+            .down-arrow {
+                font-size: 1.5rem;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
             <h1>My Simple Blog</h1>
             <p>Thoughts, ideas, and musings on various topics</p>
-        </header>
-
+            
+            <div class="links-section">
+                <h2>Currently Working On</h2>
+                <ul>
+                    <li>Project Alpha - UI/UX Redesign</li>
+                    <li>Research on Minimalist Design Principles</li>
+                    <li>Writing a series on Web Typography</li>
+                    <li>Experimenting with CSS Grid Layouts</li>
+                </ul>
+                
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#blogs">View Blogs ↓</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                    <li><a href="#">GitHub Profile</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+            
+            <div class="down-arrow" onclick="document.getElementById('blogs').scrollIntoView({behavior: 'smooth'})">
+                ↓
+            </div>
+        </div>
+    </header>
+    
+    <!-- Horizontal Rule -->
+    <hr style="border: none; border-top: 1px solid #e0d7d0; margin: 0;">
+    
+    <!-- Blog Section -->
+    <div id="blogs" class="blog-section container">
         <main>
             <article class="post">
                 <h2>Welcome to My Blog</h2>
@@ -153,4 +234,3 @@
     </div>
 </body>
 </html>
-```
