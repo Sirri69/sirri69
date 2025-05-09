@@ -1,1 +1,156 @@
-Testing
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Blog</title>
+    <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Base styles */
+        body {
+            font-family: "Consolas", "Courier New", Courier, monospace;
+            line-height: 1.8;
+            background-color: #f8f5f1; /* Warm beige background */
+            color: #4a4440; /* Dark brown-gray text */
+            padding: 2rem;
+        }
+
+        /* Container for the content */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Header styles */
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #e0d7d0;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #6b5952; /* Rich brown heading */
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #9c928e; /* Light gray-brown subheading */
+        }
+
+        /* Blog post styles */
+        .post {
+            background-color: #fff;
+            padding: 1.5rem;
+            margin-bottom: 2.5rem;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            transition: transform 0.2s ease;
+        }
+
+        .post:hover {
+            transform: translateY(-3px);
+        }
+
+        .post h2 {
+            font-size: 1.8rem;
+            margin-bottom: 0.75rem;
+            color: #6b5952;
+        }
+
+        .post .meta {
+            font-size: 0.9rem;
+            color: #9c928e;
+            margin-bottom: 1.25rem;
+        }
+
+        .post p {
+            margin-bottom: 1rem;
+        }
+
+        .post a {
+            color: #7c6a5c;
+            text-decoration: none;
+            border-bottom: 1px dotted #ccc;
+            transition: border-color 0.2s ease;
+        }
+
+        .post a:hover {
+            border-bottom-color: #9c928e;
+        }
+
+        /* Footer styles */
+        footer {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #aaa;
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e0d7d0;
+        }
+
+        /* Responsive design */
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem;
+            }
+            
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .post h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>My Simple Blog</h1>
+            <p>Thoughts, ideas, and musings on various topics</p>
+        </header>
+
+        <main>
+            <article class="post">
+                <h2>Welcome to My Blog</h2>
+                <div class="meta">Posted on June 15, 2023 by Jane Doe</div>
+                <p>Hello and welcome to my simple blog! This is where I'll be sharing my thoughts, ideas, and musings on various topics that interest me. Whether you're here for technical insights, personal reflections, or just curious exploration, I hope you'll find something of value.</p>
+                <p>This blog is intentionally kept simple and focused on content. There's no fancy design or complex features - just plain, straightforward writing that gets to the point.</p>
+                <p><a href="#">Continue reading →</a></p>
+            </article>
+
+            <article class="post">
+                <h2>The Art of Simplicity</h2>
+                <div class="meta">Posted on June 10, 2023 by Jane Doe</div>
+                <p>In a world that often celebrates complexity, there's something refreshing about simplicity. Whether it's in design, communication, or problem-solving, finding the simplest solution can often lead to the most elegant outcomes.</p>
+                <p>Simplicity doesn't mean lack of depth or sophistication. Rather, it's about stripping away the non-essential elements to reveal the core truth or function. It's about clarity, focus, and purpose.</p>
+                <p><a href="#">Continue reading →</a></p>
+            </article>
+
+            <article class="post">
+                <h2>Minimalist Living</h2>
+                <div class="meta">Posted on June 5, 2023 by Jane Doe</div>
+                <p>Minimalism has become more than just a design aesthetic - it's a way of life for many people. At its core, minimalism is about intentionally living with only what adds value to your life.</p>
+                <p>While the concept might seem extreme to some, the principles of minimalism can be applied in small ways that make a big difference. It's about making conscious choices about what you bring into your space and your life.</p>
+                <p><a href="#">Continue reading →</a></p>
+            </article>
+        </main>
+
+        <footer>
+            <p>&copy; 2023 My Simple Blog. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
+```
